@@ -97,21 +97,39 @@ This project resolves those challenges by building an **interactive Power BI das
 
 ---
 
-## 🧮 **Key Python & SQL Components**
 
-### 🔹 Python Code
-python
-# Load and clean data
-import pandas as pd
+## 🧾 Key Insights
 
-# Load datasets
-sales = pd.read_csv('retail_sales.csv')
-inventory = pd.read_csv('inventory_data.csv')
+🏆 **Electronics** and **Clothing** are the top-performing categories.  
+🧭 **East region** shows the highest inventory turnover rate.  
+📅 **March** recorded the peak monthly sales performance.  
+🚨 Several **Home** and **Grocery** products are nearing out-of-stock status.  
+📉 Correlation between **inventory and sales** helps forecast demand more accurately.  
 
-# Merge and aggregate data
-merged = pd.merge(sales, inventory, on='product_id')
-summary = merged.groupby('category')[['sales', 'inventory_qty']].sum().reset_index()
+---
 
-# Export cleaned dataset
-summary.to_csv('cleaned_retail_data.csv', index=False)
+## 🏁 **Results & Conclusion**
+- Achieved real-time inventory visibility for efficient restocking.
+- Identified top-selling categories and slow-moving items.
+- Empowered management with data-driven procurement and sales strategies. 
+
+---
+
+## 🔮 **Future Work**
+- Integrate live SQL connections for automatic data refresh in Power BI.
+- Implement forecasting models (ARIMA / Prophet) for demand prediction.
+- Expand dashboard with Customer Segmentation and CLV (Customer Lifetime Value) analysis.
+
+---
+
+## 👤 **Author & Contact**
+**Kailas Kakde**  
+📊 *Data Analyst | Power BI | SQL | Python | Excel*  
+
+📧 **Email:** kakdekailas0@gmail.com
+🌐 **LinkedIn:** [linkedin.com/in/kailaskakde](https://linkedin.com/in/kailaskakde)  
+
+
+
+
 
