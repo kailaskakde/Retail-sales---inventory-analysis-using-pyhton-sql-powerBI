@@ -1,135 +1,117 @@
-# 🛒 Store Sales & Customer Behavior Analysis Dashboard  
+
+# 🏬 Retail Sales & Inventory Analysis – Using Python, SQL & Power BI
 
 ---
 
 ## 📘 **Brief One-Line Summary**
-A Power BI dashboard analyzing store sales trends and customer behavior to uncover key business insights.
+A complete end-to-end data analytics project analyzing **retail sales and inventory performance** using **Python, SQL, and Power BI** to optimize stock levels and understand customer demand.
 
 ---
 
 ## 🧭 **Overview**
-This project explores how sales and customer data can be transformed into actionable insights using Power BI.  
-It provides visual analytics on sales performance, customer demographics, and profitability to support data-driven decision-making.
+This project demonstrates how retail data can be transformed into **actionable business insights** by combining:
+- **Data Extraction (SQL)**
+- **Data Cleaning & Transformation (Python)**
+- **Visualization & Insights (Power BI)**
+
+It focuses on analyzing **sales performance, inventory health, and demand trends** to assist management in making smarter decisions about stock, supply, and revenue strategy.
 
 ---
 
 ## ❓ **Problem Statement**
-Businesses often struggle to understand **what drives their sales performance** and **how customers behave** across products and regions.  
-This project aims to solve that by visualizing critical KPIs such as:
-- Total Revenue and Profit
-- Top Products and Categories
-- Customer Retention and Repeat Behavior
-- Profit Margin and Regional Trends
+Retail businesses often face challenges like:
+- Over- or under-stocking of items  
+- Poor visibility into product performance  
+- Lack of data-driven insights for sales optimization  
+
+This project resolves those challenges by building an **interactive Power BI dashboard** showing:
+- 📈 Sales by region, product, and category  
+- 📦 Inventory quantity and out-of-stock items  
+- 🗓️ Monthly sales and stock movement  
+- 💰 Revenue and demand correlation  
 
 ---
 
 ## 🧩 **Dataset**
 | Dataset Name | Description |
 |---------------|-------------|
-| `Sales_Data.xlsx` | Order details including product, region, revenue, and profit. |
-| `Customer_Data.xlsx` | Customer demographics, purchase frequency, and type (New/Returning). |
+| `retail_sales.csv` | Contains sales transactions with date, product, region, and revenue. |
+| `inventory_data.csv` | Contains product inventory levels, quantity sold, and stock information. |
 
 ---
 
 ## 🧠 **Tools and Technologies**
-- **Power BI Desktop** – Dashboard design and data visualization  
-- **Power Query** – Data cleaning and transformation  
-- **DAX (Data Analysis Expressions)** – KPI calculations  
-- **Excel/CSV** – Raw data source  
+- 🐍 **Python (Pandas, NumPy, Matplotlib)** – Data cleaning, analysis, and transformation  
+- 🗄️ **MySQL** – Querying and structuring sales and inventory data  
+- 📊 **Power BI Desktop** – Data modeling and visualization dashboard  
+- ⚙️ **Power Query** – Data extraction and ETL pipeline setup  
 
 ---
 
-## ⚙️ **Methods**
-1. Imported sales and customer datasets into Power BI.  
-2. Cleaned and transformed data using Power Query.  
-3. Built relationships between tables (Sales ↔ Customer).  
-4. Created DAX measures for Revenue, Profit, and Margins.  
-5. Designed interactive visuals with filters, slicers, and drill-throughs.  
+## ⚙️ **Project Workflow**
+1. **Data Extraction:**  
+   - Pulled retail sales and inventory data from MySQL.  
+
+2. **Data Cleaning & Transformation (Python):**  
+   - Used Pandas for removing null values and aggregating key metrics.  
+   - Exported cleaned data into CSV for Power BI connection.  
+
+3. **Dashboard Creation (Power BI):**  
+   - Built relationships between Sales and Inventory tables.  
+   - Designed interactive visuals with slicers for product, region, and month.  
+
+4. **Insight Generation:**  
+   - Combined inventory and sales KPIs for actionable business metrics.  
 
 ---
 
-## 🔑 **Key Insights**
-- 📈 Clothing and Electronics are the top-performing categories.  
-- 🌍 East region generated the highest sales revenue.  
-- 👥 Equal distribution between new and returning customers (50%-50%).  
-- 💰 Top 10 customers account for the majority of total revenue.  
-- 🧾 August marked the highest monthly sales (₹8.9M).  
+## 📊 **Dashboard Preview**
 
----
+### 📦 Page 1 – Inventory Management by Stocks  
+**Objective:** Track inventory quantity, daily sales, and out-of-stock items.  
 
-## 📊 **Dashboard / Model / Output**
-
-### 🏠 Page 1 – Sales Overview  
-**Objective:** Analyze sales performance and profitability by category and region.  
-
-**Visuals Included:**
-- Total Orders, Quantity, Revenue, Profit, Margin KPIs  
-- Donut Chart → Revenue by Category  
-- Line Chart → Revenue & Profit Trends by Month  
-- Bar Chart → Revenue by Region  
-- Filters → Category, Product, Location  
+**Visuals Included:**  
+- Total Stock Sold & Inventory KPI cards  
+- Bar Chart – Inventory Quantity by Category  
+- Line Chart – Inventory Trends by Month  
+- Region-wise Stock Distribution  
+- Product Table – Current Stock Levels  
 
 **Screenshot:**  
-![Sales Page](sales%20page.png)
+![Inventory Dashboard](https://github.com/kailaskakde/Retail-Sales-and-Inventory-Analysis-using-Python-SQL-PowerBI/blob/main/Screenshots/inventory_page.png)
 
 ---
 
-### 👥 Page 2 – Customer Insights  
-**Objective:** Understand customer retention and identify top spenders.  
+### 💹 Page 2 – Sales Performance Overview  
+**Objective:** Evaluate total sales, profit, and regional contribution.  
 
-**Visuals Included:**
-- Total Orders, Quantity, Revenue, Profit, Margin KPIs  
-- Donut Chart → New vs Returning Customers  
-- Bar Chart → Top 10 Customers by Revenue  
-- Matrix Table → Customer Type by Gender  
-- Filters → Region, Product, Category  
+**Visuals Included:**  
+- KPI Cards – Total Sales, Profit, Margin %  
+- Monthly Sales Trend Line  
+- Category-wise Revenue Bar Chart  
+- Region-wise Performance Comparison  
+- Filters for Product, Month, and Region  
 
 **Screenshot:**  
-![Customer Page](customers%20page.png)
+![Sales Dashboard](https://github.com/kailaskakde/Retail-Sales-and-Inventory-Analysis-using-Python-SQL-PowerBI/blob/main/Screenshots/sales_page.png)
 
 ---
 
-## 🧮 **Key DAX Formulas**
-DAX
-Total Revenue = SUM(Sales[Revenue])
-Total Profit = SUM(Sales[Profit])
-Profit Margin % = DIVIDE([Total Profit], [Total Revenue], 0)
-Total Orders = COUNTROWS(Sales)
-Total Quantity = SUM(Sales[Quantity])
+## 🧮 **Key Python & SQL Components**
 
----
+### 🔹 Python Code
+python
+# Load and clean data
+import pandas as pd
 
-## 🧰 **How to Run This Project**
-1. Download or clone this repository.
-2. Open the `.pbix` file → `store sales and customer behavior.pbix` in **Power BI Desktop**.
-3. Refresh data connections if needed.
-4. Use slicers and filters for dynamic analysis.
+# Load datasets
+sales = pd.read_csv('retail_sales.csv')
+inventory = pd.read_csv('inventory_data.csv')
 
----
+# Merge and aggregate data
+merged = pd.merge(sales, inventory, on='product_id')
+summary = merged.groupby('category')[['sales', 'inventory_qty']].sum().reset_index()
 
-## 🏁 **Results & Conclusion**
-- Power BI dashboards deliver quick visibility into performance metrics.  
-- Businesses can identify top customers and optimize category-level strategies.  
-- Monthly and regional analysis helps align future marketing and inventory decisions.  
+# Export cleaned dataset
+summary.to_csv('cleaned_retail_data.csv', index=False)
 
----
-
-## 🔮 **Future Work**
-- Integrate real-time sales data from SQL Server or APIs.  
-- Add predictive analytics for future sales forecasting.  
-- Expand the dashboard with customer lifetime value (CLV) metrics.  
-
----
-
-## 👤 **Author & Contact**
-**Kailas Kakde**  
-📊 *Data Analyst | Power BI | SQL | Python | Excel*  
-
-📧 **Email:** [your-email@example.com]  
-🌐 **LinkedIn:** [linkedin.com/in/kailaskakde](https://linkedin.com/in/kailaskakde)  
-
-🏷️ *Tags:* `#PowerBI` `#SalesDashboard` `#CustomerAnalysis` `#DataAnalytics`  
-
----
-
-© 2025 Kailas Kakde | All Rights Reserved
