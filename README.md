@@ -93,7 +93,7 @@ This project resolves those challenges by building an **interactive Power BI das
 - Filters for Product, Month, and Region  
 
 **Screenshot:**  
-![Sales Dashboard](https://github.com/kailaskakde/Retail-Sales-and-Inventory-Analysis-using-Python-SQL-PowerBI/blob/main/Screenshots/sales_page.png)
+![Sales Dashboard](https://github.com/kailaskakde/Retail-sales---inventory-analysis-using-pyhton-sql-powerBI/blob/main/dashbord%20image/sales%20page.png)
 
 ---
 
