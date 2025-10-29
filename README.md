@@ -78,7 +78,7 @@ This project resolves those challenges by building an **interactive Power BI das
 - Product Table – Current Stock Levels  
 
 **Screenshot:**  
-![Inventory Dashboard](https://github.com/kailaskakde/Retail-Sales-and-Inventory-Analysis-using-Python-SQL-PowerBI/blob/main/Screenshots/inventory_page.png)
+![Inventory Dashboard](https://github.com/kailaskakde/Retail-sales---inventory-analysis-using-pyhton-sql-powerBI/blob/main/dashbord%20image/inventory%20page.png)
 
 ---
 
